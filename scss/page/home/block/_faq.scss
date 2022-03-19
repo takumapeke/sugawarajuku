@@ -1,0 +1,88 @@
+@use '../../../mixin/mixin' as *;
+@use '../../../setting/config' as *;
+
+.faq{
+    padding: 100px 20px 0;
+    &__ttl{
+        font-size: 2.4rem;
+        font-weight: 700;
+        text-align: center;
+    }
+    &__emphasis{
+        padding: 0 15px;
+        border-bottom: 4px solid $orange;
+        position: relative;
+        &::after{
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f303";
+            position: absolute;
+            top: 0px;
+            right: -12px;
+            font-size: 1.8rem;
+            color: $orange;
+        }
+    }
+    &__box{
+        margin-top: 35px;
+    }
+    &__item{
+        font-size: 1.4rem;
+        padding: 15px 0;
+        border-bottom: 1px solid #000;
+        &:first-child{
+            padding-top: 0;
+        }
+    }
+    &__q{
+        display: flex;
+        margin-bottom: 10px;
+    }
+    &__icon{
+        $this:&;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        &#{$this}--q{
+            background-color: $orange;
+            color: #fff;
+        }
+        &#{$this}--a{
+            background-color: #ddd;
+        }
+    }
+    &__txt-q{
+        padding: 3px 0 0 7px;
+        font-size: 1.5rem;
+        flex: 1;
+    }
+    &__a{
+        display: flex;
+    }
+    &__body{
+        flex: 1;
+        padding: 3px 0 0 7px;
+    }
+}
+@include m(){
+    .faq{
+        &__item{
+            font-size: 1.6rem;
+        }
+        &__icon{
+            width: 37px;
+            height: 37px;
+        }
+        &__txt-q{
+            font-size: 1.6rem;
+            padding-top: 5px;
+        }
+        &__body{
+            padding-top: 5px;
+        }
+    }
+}

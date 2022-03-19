@@ -1,0 +1,76 @@
+@use '../../../mixin/mixin' as *;
+@use '../../../setting/config' as *;
+
+.price{
+    padding: 100px 20px 0;
+    &__ttl{
+        font-size: 2.4rem;
+        font-weight: 700;
+        text-align: center;
+    }
+    &__emphasis{
+        padding: 0 15px;
+        border-bottom: 4px solid $orange;
+        position: relative;
+        &::after{
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f303";
+            position: absolute;
+            top: 0px;
+            right: -12px;
+            font-size: 1.8rem;
+            color: $orange;
+        }
+    }
+    &__tab{
+        margin-top: 45px;
+    }
+    &__box{
+        border-top: 2px solid $orange;
+        padding-top: 30px;
+    }
+    &__course+&__course{
+        margin-top: 50px;
+    }
+    &__subttl{
+        font-weight: 700;
+        border-bottom: 2px solid #000;
+    }
+    &__table{
+        margin-top: 15px;
+        width: 100%;
+        font-size: 1.3rem;
+    }
+    &__th,&__td{
+        border: 1px solid #ddd;
+        text-align: center;
+        width: 25%;
+        padding: 5px 0;
+    }
+    &__th{
+        background-color: #f5f5f5;
+    }
+}
+@include s(){
+    .price__table{
+        font-size: 1.4rem;
+    }
+}
+@include m(){
+    .price{
+        padding: 100px 30px 0;
+        &__ttl{
+            font-size: 2.6rem;
+        }
+        &__subttl{
+            font-size: 1.8rem;
+        }
+        &__table{
+            font-size: 1.5rem;
+        }
+        &__th,&__td{
+            padding: 10px;
+        }
+    }
+}

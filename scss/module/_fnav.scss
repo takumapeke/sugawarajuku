@@ -1,0 +1,41 @@
+@use '../mixin/mixin' as *;
+@use '../setting/config' as *;
+
+.fnav{
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__item{
+        padding: 10px 20px;
+    }
+    &__link{
+        display: block;
+        padding-left: 15px;
+        position: relative;
+        &::before{
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f105";
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+@include l(){
+    .fnav{
+        &__list{
+            justify-content: space-between;
+        }
+        &__item{
+            padding: 0;
+        }
+        &__link{
+            padding-left: 0;
+            &::before{
+                display: none;
+            }
+        }
+    }
+}

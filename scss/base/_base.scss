@@ -1,0 +1,19 @@
+@use '../mixin/mixin' as *;
+
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem;
+    line-height: 1.4;
+    font-family: 'Noto Sans JP', sans-serif;
+    @include s(){/* sサイズ */}
+    @include m(){/* mサイズ */ }
+    @include l(){/* lサイズ */}
+    @include xl(){/* xlサイズ */}
+}
+
+img{
+    width: 100%;
+    height: auto;
+}

@@ -1,0 +1,18 @@
+@use '../mixin/mixin' as *;
+
+@include s(){
+    .inner{
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+@include m(){
+    .inner{
+        max-width: 800px;
+    }
+}
+@include l(){
+    .inner{
+        max-width: 1050px;
+    }
+}

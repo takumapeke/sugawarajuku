@@ -1,0 +1,10 @@
+@use '../mixin/mixin' as *;
+
+.main >:first-child{
+    margin-top: 99.35px;
+}
+@include m(){
+    .main >:first-child{
+        margin-top: 103.88px;
+    }
+}

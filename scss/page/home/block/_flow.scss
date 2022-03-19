@@ -1,0 +1,88 @@
+@use '../../../mixin/mixin' as *;
+@use '../../../setting/config' as *;
+
+.flow{
+    padding: 45px 20px;
+    background-color: #0070C0;
+    &__head{
+        text-align: center;
+    }
+    &__ttl{
+        font-size: 2.4rem;
+        color: #fff;
+        font-weight: 700;
+    }
+    &__caution{
+        color: #fff;
+        margin-top: 15px;
+        display: inline-block;
+        text-align: left;
+    }
+    &__box{
+        margin-top: 35px;
+        display: flex;
+        flex-direction: column;
+    }
+    &__item{
+        background-color: #fff;
+        padding: 25px;
+        text-align: center;
+        &:nth-child(n+2){
+            margin-top: 30px;
+        }
+    }
+    &__num{
+        width: 35px;
+        height: 35px;
+        margin: 0 auto;
+        border-radius: 50%;
+        background-color: #0070c0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-weight: 700;
+    }
+    &__subttl{
+        margin-top: 15px;
+        font-size: 1.8rem;
+        font-weight: 700;
+    }
+    &__txt{
+        margin-top: 15px;
+        font-size: 1.4rem;
+        display: inline-block;
+        text-align: left;
+    }
+}
+@include m(){
+    .flow{
+        &__ttl{
+            font-size: 2.8rem;
+        }
+        &__box{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        &__item{
+            width: 23%;
+            padding: 25px 17px;
+            &:nth-child(n+2){
+                margin-top: 0;
+            }
+        }
+    }
+}
+@include l(){
+    .flow{
+        &__ttl{
+            font-size: 3rem;
+        }
+        &__subttl{
+            font-size: 2rem;
+        }
+        &__txt{
+            font-size: 1.6rem;
+        }
+    }
+}

@@ -1,0 +1,103 @@
+@use '../../../mixin/mixin' as *;
+@use '../../../setting/config' as *;
+
+.features{
+    padding: 100px 20px 0;
+    &__ttl{
+        font-size: 2.4rem;
+        font-weight: 700;
+        text-align: center;
+        letter-spacing: 0.05em;
+    }
+    &__emphasis{
+        font-size: 3.2rem;
+        color: $orange;
+    }
+    &__box{
+        margin-top: 45px;
+    }
+    &__item{
+        display: flex;
+        flex-direction: column-reverse;
+        &:nth-child(n+2){
+            margin-top: 65px;
+        }
+    }
+    &__body{
+        margin-top: 20px;
+    }
+    &__label{
+        width: 100px;
+        padding: 5px;
+        font-size: 1.4rem;
+        color: #fff;
+        text-align: center;
+        font-weight: 700;
+    }
+    &__red{
+        background-color: $red;
+    }
+    &__blue{
+        background-color: $blue;
+    }
+    &__green{
+        background-color: $green;
+    }
+    &__subttl{
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-top: 15px;
+    }
+    &__txt{
+        font-size: 1.4rem;
+        line-height: 2;
+        margin-top: 15px;
+    }
+    &__img{
+        width: 240px;
+        margin: 0 auto;
+    }
+}
+@include m(){
+    .features{
+        &__ttl{
+            font-size: 2.8rem;
+        }
+        &__emphasis{
+            font-size: 3.4rem;
+        }
+        &__item{
+            flex-direction: row;
+            align-items: flex-end;
+            &:nth-child(n+2){
+                margin-top: 75px;
+            }
+        }
+        &__body{
+            margin: 0 50px 0 0;
+            flex: 1;
+        }
+        &__img{
+            margin: 0;
+        }
+    }
+}
+@include l(){
+    .features{
+        &__ttl{
+            font-size: 3rem;
+        }
+        &__emphasis{
+            font-size: 3.8rem;
+        }
+        &__subttl{
+            font-size: 2rem;
+        }
+        &__txt{
+            font-size: 1.6rem;
+        }
+        &__img{
+            width: 280px;
+        }
+    }
+}

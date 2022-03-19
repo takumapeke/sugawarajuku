@@ -1,0 +1,85 @@
+@use '../../../mixin/mixin' as *;
+@use '../../../mixin/ttl' as *;
+@use '../../../setting/config' as *;
+
+.guide{
+    padding: 60px 20px 70px;
+    &__ttl{
+        @include ttl;
+    }
+    &__box{
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+    }
+    &__item{
+        width: 360px;
+        max-width: 100%;
+        margin: 0 auto;
+        &:nth-child(n+2){
+            margin-top: 35px;
+        }
+    }
+    &__link{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    &__img{
+        height: 160px;
+        object-fit: cover;
+    }
+    &__txt{
+        font-size: 1.8rem;
+        color: #fff;
+        font-weight: 700;
+        text-align: center;
+        padding: 15px;
+    }
+    &__red{
+        background-color: $red;
+    }
+    &__blue{
+        background-color: $blue;
+    }
+    &__green{
+        background-color: $green;
+    }
+}
+@include s(){
+    .guide{
+        &__box{
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        &__item{
+            width: 45%;
+            margin: 0;
+            &:nth-child(2){
+                margin: 0 0 0 50px;
+            }
+        }
+    }
+}
+@include m(){
+    .guide{
+        padding: 100px 30px 85px;
+        &__box{
+            justify-content: space-between;
+        }
+        &__item{
+            width: 30%;
+            &:nth-child(2){
+                margin-left: 0;
+            }
+            &:last-child{
+                margin-top: 0;
+            }
+        }
+    }
+}
+@include l(){
+    .guide__link:hover{
+        opacity: .7;
+    }
+}

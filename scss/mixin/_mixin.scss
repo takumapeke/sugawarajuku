@@ -1,0 +1,23 @@
+@use '../setting/config' as s;
+
+// メディアクエリ
+@mixin s{
+    @media only screen and (min-width: #{s.$bp-s}) {
+        @content;
+    }
+}
+@mixin m {
+    @media only screen and (min-width: #{s.$bp-m}) {
+        @content;
+    }
+}
+@mixin l {
+    @media only screen and (min-width: #{s.$bp-l}) {
+        @content;
+    }
+}
+@mixin xl {
+    @media only screen and (min-width: #{s.$bp-xl}) {
+        @content;
+    }
+}

@@ -1,0 +1,35 @@
+@use '../mixin/mixin' as *;
+@use '../setting/config' as *;
+
+.footer{
+    padding: 50px 20px 25px;
+    background-color: $orange;
+    &__logo{
+        width: 160px;
+        margin: 0 auto;
+    }
+    &__nav{
+        margin-top: 40px;
+    }
+    &__bottom{
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+    }
+    &__info{
+        text-align: center;
+    }
+    &__copyright{
+        margin-top: 20px;
+        font-size: 1.4rem;
+        text-align: center;
+    }
+}
+@include m(){
+    .footer{
+        padding: 50px 30px 25px;
+        &__bottom{
+            margin-top: 65px;
+        }
+    }
+}

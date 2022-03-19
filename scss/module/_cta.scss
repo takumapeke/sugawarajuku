@@ -1,0 +1,77 @@
+@use '../mixin/mixin' as *;
+@use '../mixin/ttl' as *;
+@use '../setting/config' as *;
+
+.cta{
+    $this:&;
+    padding: 45px 20px 0;
+    &#{$this}--bottom{
+        padding: 90px 20px 45px;
+    }
+    &__ttl{
+        @include ttl;
+    }
+    &__box{
+        display: flex;
+        flex-direction: column;
+        margin-top: 25px;
+        font-weight: 700;
+        text-align: center;
+    }
+    &__item{
+        border: 1px solid #ddd;
+    }
+    &__head{
+        background-color: #f5f5f5;
+        padding: 5px;
+        border-bottom: 1px solid #ddd;
+    }
+    &__body{
+        padding: 13px 10px;
+    }
+    &__tel{
+        font-size: 2.8rem;
+        color: $red;
+        display: block;
+    }
+    &__txt{
+        margin-top: 7px;
+        font-size: 1.4rem;
+    }
+    &__btn{
+        display: inline-block;
+        padding: 15px 20px;
+        border-radius: 6px;
+        background-color: $orange;
+        font-size: 1.4rem;
+        color: #fff;
+        box-shadow: 0 3px #f0821e;
+        position: relative;
+        top: -2px;
+        &:hover{
+            box-shadow: 0 1px #f0821e;
+            top: 1px;
+        }
+    }
+}
+@include m(){
+    .cta{
+        $this:&;
+        padding: 45px 30px 0;
+        &#{$this}--bottom{
+            padding: 90px 30px 45px;
+        }
+        &__box{
+            flex-direction: row;
+        }
+        &__item{
+            width: 50%;
+        }
+        &__btn{
+            top: 5px;
+            &:hover{
+                top: 8px;
+            }
+        }
+    }
+}

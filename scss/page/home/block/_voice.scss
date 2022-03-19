@@ -1,0 +1,149 @@
+@use '../../../mixin/mixin' as *;
+@use '../../../setting/config' as *;
+
+.voice{
+    padding: 75px 20px 0;
+    &__head{
+        text-align: center;
+    }
+    &__ttl{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.2rem;
+        font-weight: 700;
+        &::after,&::before{
+            content: '';
+            width: 60px;
+            height: 3px;
+            background-color: $orange;
+        }
+        &::before{
+            margin-right: 12px;
+        }
+        &::after{
+            margin-left: 12px;
+        }
+    }
+    &__head-txt{
+        margin-top: 15px;
+        display: inline-block;
+        text-align: left;
+    }
+    &__emphasis{
+        font-size: 2.2rem;
+        color: $orange;
+        font-weight: 700;
+    }
+    &__box{
+        margin-top: 35px;
+        display: flex;
+        flex-direction: column;
+    }
+    &__item{
+        display: flex;
+        flex-direction: column-reverse;
+        &:nth-child(n+2){
+            margin-top: 50px;
+        }
+    }
+    &__body{
+        margin-top: 20px;
+    }
+    &__subttl{
+        font-weight: 700;
+    }
+    &__red{
+        color: $red;
+    }
+    &__blue{
+        color: $blue;
+    }
+    &__green{
+        color: $green;
+    }
+    &__txt{
+        margin-top: 10px;
+        font-size: 1.4rem;
+    }
+    &__name{
+        margin-top: 10px;
+        font-size: 1.4rem;
+        text-align: right;
+    }
+    &__img{
+        max-width: 135px;
+        margin: 0 auto;
+    }
+    &__btnwrap{
+        margin-top: 45px;
+    }
+    &__btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $orange;
+        border-radius: 25px;
+        padding: 7px;
+        width: 180px;
+        margin: 0 auto;
+        font-size: 1.4rem;
+        color: #fff;
+        font-weight: 700;
+    }
+    &__btn-icon{
+        margin-left: 5px;
+    }
+}
+@include m(){
+    .voice{
+        padding: 100px 30px 0;
+        &__ttl{
+            font-size: 2.6rem;
+            &::after,&::before{
+                width: 75px;
+            }
+            &::before{
+                margin-right: 18px;
+            }
+            &::after{
+                margin-left: 18px;
+            }
+        }
+        &__box{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        &__item{
+            width: 30%;
+            &:nth-child(n+2){
+                margin-top: 0;
+            }
+        }
+        &__btnwrap{
+            margin-top: 55px;
+        }
+    }
+}
+@include l(){
+    .voice{
+        &__ttl{
+            font-size: 3rem;
+            &::after,&::before{
+                width: 150px;
+            }
+        }
+        &__box{
+            margin-top: 55px;
+        }
+        &__subttl{
+            font-size: 1.8rem;
+        }
+        &__txt,&__name{
+            font-size: 1.6rem;
+        }
+        &__btn:hover{
+            opacity: .7;
+        }
+    }
+}
